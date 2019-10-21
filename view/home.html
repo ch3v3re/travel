@@ -67,10 +67,10 @@
     <div id='passengers' class='dropdown-content'>
         <div>
             <div class="row" ng-repeat="item in hm.passengers">
-                <div class="col m8">
+                <div class="col s8 m8">
                     <p>{{item.label}} <b> {{item.reference}}</b></p>
                 </div>
-                <div class="col m4 flex-container">
+                <div class="col s8 m4 flex-container">
                     <i class="material-icons pointer"
                        ng-click="hm.modify($index,'d')"
                        ng-disabled="item.down">
