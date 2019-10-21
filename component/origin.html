@@ -1,0 +1,104 @@
+<div ng-controller="Origin as or">
+    <div class="row">
+        <div class="bg-color-f3f5f7"
+             id="chips-origin-dropdown-id"
+             data-target='origin'>
+            <i class="icon-chip-airplane col m2 small material-icons"
+               ng-if="or.origin.length == 0">
+                airplanemode_active
+            </i>
+            <div class="chips col m10"
+                 ng-class="{'m12': or.origin.length > 0}"
+                 id="chips-origin">
+                <input placeholder="origin" ng-class="{'width-0': or.origin.length != 0}"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Structure -->
+    <div id='origin' class='dropdown-content destination-card'>
+        <div class="row" style="margin:0">
+            <i class="icon-chip-airplane col m1 small material-icons">airplanemode_active</i>
+            <div class="chips" id="chip-origin-dropdown">
+                <input id="chip-dropdown" ng-model="or.filter">
+            </div>
+        </div>
+
+        <div ng-if="or.filter!=''">
+            <!-- include nearby airports-->
+            <div>
+                <div class="card horizontal destination-card-card flex-container">
+                    <div>
+                        <i class="col m1 small material-icons">location_on</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s9 destination-card-text">
+                                    <p>Incluir aeropuertos cercanos</p>
+                                    <p>Amplía tu búsqueda e incluye aeropuertos a 113 km o menos</p>
+                                </div>
+                                <p class="col s3 destination-card-checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-model="place.checked"/>
+                                        <span>.</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider" tabindex="-1"></div>
+            </div>
+
+            <!--place card-->
+            <div class="card horizontal destination-card-card flex-container"
+                 ng-repeat="place in or.origin_search| filter:or.filter">
+                <div>
+                    <img class="place-img" ng-src="{{place.img}}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s9 destination-card-text">
+                                <p>{{place.title}}</p>
+                                <p>{{place.subtitle}}</p>
+                            </div>
+                            <p class="col s3 destination-card-checkbox">
+                                <label ng-mouseup="or.Modify(place)">
+                                    <span>{{place.abbreviation}}</span>
+                                    <input type="checkbox" ng-model="place.checked"/>
+                                    <span>.</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--        Do you know where to go?-->
+        <div class="personalized-card" ng-if="or.filter === ''">
+            <div class="divider" tabindex="-1"></div>
+            <div class="card horizontal flex-container pointer">
+                <div>
+                    <i class="col m1 small material-icons">location_on</i>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s9 destination-card-text">
+                                <p>¿No sabes a dónde ir?</p>
+                                <p>Explora tus opciones con una búsqueda a cualquier lugar</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <i class="col m1 small material-icons">arrow_forward</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

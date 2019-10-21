@@ -1,0 +1,437 @@
+/*animations start*/
+@-webkit-keyframes rotateOt {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -100deg);
+        transform: rotate3d(0, 0, 1, -100deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -180deg);
+        transform: rotate3d(0, 0, 1, -180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateOt {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -100deg);
+        transform: rotate3d(0, 0, 1, -100deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -180deg);
+        transform: rotate3d(0, 0, 1, -180deg);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -100deg);
+        transform: rotate3d(0, 0, 1, -100deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -100deg);
+        transform: rotate3d(0, 0, 1, -100deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+/*animations end*/
+body {
+    background-color: #fff;
+}
+
+.rotate-in {
+    -webkit-animation-name: rotateIn !important; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 400ms; /* Safari 4.0 - 8.0 */
+    animation-name: rotateIn !important;
+    animation-duration: 400ms;
+}
+
+.chips .input.width-0 {
+    width: 0 !important;
+}
+
+.personalized-card .card:hover {
+    background-color: rgba(60, 60, 60, .1)
+}
+
+.pl {
+    padding-left: 0 !important;
+}
+
+.rotate-ot {
+    -webkit-animation-name: rotateOt !important; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 400ms; /* Safari 4.0 - 8.0 */
+    animation-name: rotateOt !important;
+    animation-duration: 400ms;
+}
+
+
+.chip {
+    border-radius: 0;
+    border: 1px solid rgba(100, 100, 100, .1);
+    padding: 0 5px;
+    background-color: #fff;
+}
+
+
+.destination-card {
+    min-width: 600px !important;
+    height: auto !important;
+    max-height: 430px;
+    transition-duration: 100ms;
+    -webkit-transition-duration: 100ms;
+}
+
+.
+.destination-card .card.horizontal .card-image img {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+}
+
+[type="checkbox"] + span:not(.lever) {
+    color: transparent;
+    padding: 0;
+}
+
+.destination-card-checkbox {
+    text-align: right;
+    margin-top: 12px !important;
+}
+
+.row i.icon-chip-airplane.mt-5 {
+    margin-top: 5px;
+}
+
+.chip {
+    margin-right: 2px;
+    letter-spacing: -1px;
+}
+
+.w-0 {
+    width: 1px !important;
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+#change-direction-icon {
+    background-color: #f3f5f7 !important;
+}
+
+.flex-item {
+    width: fit-content !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: fit-content;
+    cursor: pointer;
+    padding: 11px !important;
+}
+
+#passengers b {
+    margin-left: 3px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, .5);
+}
+
+#passengers .row {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+#passengers .row:first-of-type {
+    padding-top: 20px;
+}
+
+#passengers .row:last-of-type {
+    padding-bottom: 20px;
+}
+
+#passengers p {
+    margin: 0;
+}
+
+#passengers {
+    min-width: 295px !important;
+    height: auto !important;
+}
+
+#passengers .row:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.dropdown-content li > span {
+    color: #0d0d0d;
+}
+
+.warning-message {
+    color: #f44336;
+    text-align: center;
+}
+
+#passengers i {
+    border: 1px solid rgba(0, 0, 0, .2);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 1px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 15px;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+.caret {
+    border-top: 0 !important;
+}
+
+#change-direction-icon i {
+    margin-left: 0;
+    padding: 0;
+}
+
+.place-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+.bg-color-f3f5f7 {
+    background-color: #f3f5f7 !important;
+    display: flex;
+}
+
+.common-class-datepicker input.datepicker {
+    border-bottom: none;
+    margin: 0;
+}
+
+.input-field,
+.chips {
+    margin: 0;
+}
+
+
+#chips-origin,
+#chips-destination {
+    border-bottom: none;
+}
+
+.destination-card-checkbox label {
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.select-options .select-wrapper input.select-dropdown,
+.select-options input.select-passenger,
+.select-options input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 0;
+    letter-spacing: -1px;
+    font-size: 15px;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+h3.title {
+    color: #212a30;
+    font-family: "Forza-Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    text-align: left;
+    min-height: 41px;
+    overflow: hidden;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.row-reverse {
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.destination-card-text p:first-child {
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.destination-card-text p:last-child {
+    font-size: 12px;
+}
+
+.destination-card .card .card-content {
+    padding: 11px;
+}
+
+.destination-card-card {
+    -webkit-box-shadow: 0 0 0 transparent !important;
+    box-shadow: 0 0 0 transparent !important;
+    margin: 0 10px;
+}
+
+.row i.icon-chip-airplane {
+    transform: rotate(45deg);
+}
+
+div#calendar {
+    padding: 0;
+    margin-left: 0;
+}
+
+.col.m5.bg-color-f3f5f7 {
+    padding: 0;
+}
+
+div#calendar .input-group:first-of-type {
+    border-right: 1px solid rgba(100, 100, 100, .2);
+    padding: 0;
+}
+
+.bg-modal {
+    background-color: rgba(100, 100, 100, .2);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+/*datepicker css*/
+
+.table-condensed thead tr:first-child {
+    background-color: #eab137;
+    color: #fff;
+    border-radius: 0px;
+}
+
+.table-condensed thead tr:first-child th:hover {
+    background-color: #eab137;
+    color: #fff;
+    border-radius: 0px;
+}
+
+.form-control {
+    height: 45px;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+}
+
+.form-control:focus {
+    border-color: #fff;
+    outline: 0px none;
+    outline: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) inset, 0px 0px 0px rgba(102, 175, 233, 0.6);
+}
+
+.calend {
+    padding: 0px;
+    width: 317px;
+}
+
+.input-group.date {
+    height: 45px;
+}
+
+.icon-calendar {
+    margin-left: 0em;
+    margin-right: 0.3em;
+    color: #000;
+}
+
+.caret {
+    margin-right: 60px;
+    color: #000;
+    border-top: 5px dashed;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.text, .filter-option {
+    color: #000;
+    font-weight: 700;
+}
+
+.input-group-addon {
+    background-color: #fff;
+    border: 0px none;
+    font-size: 15px;
+    padding: 10px 15px 10px 20px;
+    border-radius: 0px;
+}
+
+.input-group-addon .icon.icon-caret-down {
+    color: #000;
+    font-size: 15.6px;
+}
+
+.form-select {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+}
+
+.container {
+    width: 1020px;
+    margin: auto;
+    min-width: 615px;
+}

@@ -1,0 +1,56 @@
+@media screen and (max-width: 993px) {
+    .container {
+        width: 100%;
+    }
+
+    .form-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 94% !important;
+        margin-left: 15px !important;
+    }
+
+    .picker-container {
+        width: 92%;
+        margin: auto !important;
+    }
+
+    #picker-container {
+        margin-top: 6px;
+    }
+
+    .search-button-content {
+        padding: 0 !important;
+    }
+
+    .search-button {
+        width: 100% !important;
+        margin-top: 6px;
+    }
+
+    .select-wrapper ul {
+        width: auto !important;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .form-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 93% !important;
+        margin-left: 20px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #choose-End-date{
+        margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+}

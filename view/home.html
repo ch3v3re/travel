@@ -1,0 +1,96 @@
+<div class="container" ng-controller="Home as hm">
+
+    <!--    h3 hello user-->
+    <h3>¡Hola de nuevo, User!</h3>
+
+    <div class="row select-options">
+        <!--        round trip-->
+        <div class="col s4 m2 ">
+            <select class="icons" ng-model="hm.round_trip">
+                <option value="" class="left">Ida y vuelta</option>
+                <option value="" class="left">Solo ida</option>
+                <option value="" class="left">Multidestino</option>
+            </select>
+        </div>
+
+        <!--        passenger-->
+        <div class="col s4 m2">
+            <input ng-model="hm.count_passenger" readonly data-target='passengers' type="text"
+                   class="select-passenger pointer"/>
+        </div>
+
+        <!--class-->
+        <div class="col s4 m2">
+            <select class="icons">
+                <option value="" class="left">Económica</option>
+                <option value="" class="left">Económica preferente</option>
+                <option value="" class="left">Ejecutiva</option>
+                <option value="" class="left">Primera</option>
+                <option value="" class="left">Varias</option>
+            </select>
+        </div>
+    </div>
+
+    <!--form-->
+    <div class="row">
+        <div class="flex-container col m12 l6 pl form-container" ng-class="{' row-reverse': hm.switchOrigin}">
+            <!--            choose origin component-->
+            <div id="origin-component" class="col m5 l5" ng-include="'component/origin.html'"></div>
+
+            <!--            exchange origin and destination-->
+            <div class="flex-item col m2 l2" id="change-direction-icon" style="cursor: pointer;"
+                 ng-click="hm.switch_origin()">
+                <i class="material-icons" ng-class="{'rotate-in': hm.switchOrigin,'rotate-ot': !hm.switchOrigin}">compare_arrows</i>
+            </div>
+
+            <!--            choose destination component-->
+            <div id="destination-component" class="col m5 l5" ng-include="'component/destination.html'"></div>
+        </div>
+        <div class="flex-container col m12 l6" id="picker-container">
+            <div class="row picker-container">
+                <!--        choose date-->
+                <div class="col s12 m12 l10 bg-color-f3f5f7" ng-include="'component/datepicker.html'"></div>
+                <!--        search component-->
+                <div class="col s12 m12 l2 search-button-content">
+                    <div class=" s12 flex-item bg-color-f3f5f7 search-button">
+                        <i class="material-icons">search</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="options-content">
+    <!-- passenger Dropdown-->
+    <div id='passengers' class='dropdown-content'>
+        <div>
+            <div class="row" ng-repeat="item in hm.passengers">
+                <div class="col m8">
+                    <p>{{item.label}} <b> {{item.reference}}</b></p>
+                </div>
+                <div class="col m4 flex-container">
+                    <i class="material-icons pointer"
+                       ng-click="hm.modify($index,'d')"
+                       ng-disabled="item.down">
+                        remove
+                    </i>
+
+                    <label>{{item.count}}</label>
+                    <i class="material-icons pointer"
+                       ng-click="hm.modify($index,'u')"
+                       ng-disabled="item.up">
+                        add
+                    </i>
+                </div>
+
+
+            </div>
+            <div class=""
+                 ng-if="hm.passenger_has_error">
+                <div class="divider" tabindex="-1"></div>
+                <p class="warning-message flex-item">{{hm.error_message}} </p>
+            </div>
+        </div>
+    </div>
+</div>
