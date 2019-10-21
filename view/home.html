@@ -15,9 +15,14 @@
 
         <!--        passenger-->
         <div class="col s4 m2">
-            <input ng-model="hm.count_passenger" readonly data-target='passengers' type="text"
-                   class="select-passenger pointer"/>
+            <input ng-model="hm.count_passenger_str"
+                   data-target='passengers' type="text"
+                   class="select-passenger pointer"
+                   id="count_passenger-input"
+                   readonly
+            />
         </div>
+
 
         <!--class-->
         <div class="col s4 m2">

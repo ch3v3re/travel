@@ -9,16 +9,18 @@
         let hm = this;
 
         hm.switchOrigin = false;
-        hm.count_passenger = '1 Adulto';
+        hm.count_passenger_str = '1 Adulto';
+
         hm.switch_origin = () => {
             hm.switchOrigin = !hm.switchOrigin;
         };
+
         hm.passenger_has_error = false;
         hm.passengers = [
             {
                 label: 'Adultos',
                 reference: '',
-                count: 0,
+                count: 1,
                 up: true,
                 down: false
             },
@@ -48,17 +50,24 @@
                 down: false
             },
         ];
+        hm.count_passenger_number = 1;
+
         hm.modify = (index, up_down) => {
             hm.passenger_has_error = false;
+
             switch (up_down) {
+
                 case 'u':
                     if (index === 4 && hm.passengers[0].count === hm.passengers[4].count) {
                         hm.error_message = 'La búsqueda no puede incluir más bebés en regazo que adultos';
                         hm.passenger_has_error = true;
                         break;
                     }
+
+                    hm.count_passenger_number++;
                     hm.passengers[index].count++;
                     break;
+
                 case 'd':
                     // validating negative numbers
                     if (hm.passengers[index].count === 0) {
@@ -71,10 +80,22 @@
                         hm.passenger_has_error = true;
                         break;
                     }
+                    if (hm.passengers[0].count === 1 && index === 0) {
+                        hm.error_message = 'La búsqueda debe incluir al menos 1 Adulto';
+                        hm.passenger_has_error = true;
+                        break;
+                    }
                     hm.passengers[index].count--;
+                    hm.count_passenger_number--;
                     break;
             }
+
+            let passenger = hm.count_passenger_number > 1 ? " Pasajeros" : " Pasajero";
+            hm.count_passenger_str = hm.count_passenger_number + passenger;
+            document.getElementById('count_passenger-input').value = hm.count_passenger_str;
+
         };
+
         $(document).ready(() => {
             $('.select-passenger').dropdown({closeOnClick: false});
             $('select').formSelect();

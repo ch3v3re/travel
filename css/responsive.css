@@ -102,6 +102,12 @@
     div#calendar .input-group:first-of-type {
         border-right: none;
     }
+
+    #passengers {
+        left: 50% !important;
+        margin-left: -145px;
+        width: 250px !important;
+    }
 }
 
 @media screen and (max-width: 320px) {
