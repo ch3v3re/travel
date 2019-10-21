@@ -98,6 +98,10 @@
     .pick-end-date {
         margin-left: -9px;
     }
+
+    div#calendar .input-group:first-of-type {
+        border-right: none;
+    }
 }
 
 @media screen and (max-width: 320px) {
