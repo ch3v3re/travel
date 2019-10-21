@@ -119,7 +119,7 @@
             });
 
             //trigger dropdown to select destination
-            $('#chips-destination').dropdown({
+            $('#destination-container').dropdown({
                 closeOnClick: false,
                 onCloseStart: () => {
                     $timeout(() => {

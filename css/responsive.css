@@ -46,8 +46,57 @@
 }
 
 @media screen and (max-width: 600px) {
-    #choose-End-date{
+    #choose-End-date {
         margin-top: 4px;
+    }
+
+    #destination-container {
+        margin-top: 5px;
+    }
+
+    .input-field.flex-container.input-group.col.s12.m6.row {
+        background-color: #f3f5f7;
+    }
+
+    .picker-container .bg-color-f3f5f7 {
+        background-color: transparent !important;
+    }
+
+    .picker-container .search-button-content .search-button {
+        background-color: #f3f5f7 !important;
+    }
+
+    #include-datepicker-component {
+        padding-left: 0;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    #change-direction-icon {
+        border: 2px solid #fff;
+        position: absolute;
+        right: 33px;
+        margin-top: 19px;
+    }
+
+    .row-reverse {
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .row-reverse #change-direction-icon {
+        margin-top: -19px;
+    }
+
+    .row-reverse #destination-component {
+        margin-bottom: 5px;
+    }
+
+    /*bg-color-f3f5f7 search-button*/
+    .pick-end-date {
+        margin-left: -9px;
     }
 }
 

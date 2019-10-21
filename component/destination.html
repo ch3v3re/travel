@@ -1,7 +1,8 @@
 <div ng-controller="Destination as dt">
-    {{dt.tester}}
     <div class="row">
-        <div class="bg-color-f3f5f7">
+        <div class="bg-color-f3f5f7"
+             id="destination-container"
+             data-target='destination'>
             <i class="icon-chip-airplane col m2 small material-icons"
                ng-if="dt.destination.length == 0">
                 airplanemode_active
@@ -9,7 +10,7 @@
             <div class="chips col m10"
                  ng-class="{'m12': dt.destination.length > 0}"
                  id="chips-destination"
-                 data-target='destination'>
+            >
                 <input placeholder="destino" ng-class="{'width-0': dt.destination.length != 0}"/>
             </div>
         </div>
@@ -103,3 +104,4 @@
             </div>
         </div>
     </div>
+</div>

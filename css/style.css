@@ -242,6 +242,11 @@ body {
     display: flex;
 }
 
+
+.destination-card {
+    min-width: 99% !important;
+}
+
 .common-class-datepicker input.datepicker {
     border-bottom: none;
     margin: 0;
@@ -433,5 +438,4 @@ div#calendar .input-group:first-of-type {
 .container {
     width: 1020px;
     margin: auto;
-    min-width: 615px;
 }
