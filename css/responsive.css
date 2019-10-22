@@ -108,6 +108,10 @@
         margin-left: -145px;
         width: 250px !important;
     }
+
+    .destination-card {
+        min-width: 99% !important;
+    }
 }
 
 @media screen and (max-width: 320px) {

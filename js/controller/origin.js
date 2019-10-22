@@ -45,8 +45,6 @@
         // modify or.origin
         or.Modify = (place) => {
             let index = -1;
-
-
             or.origin.find((item, i) => {
                 if (place.id === item.id) {
                     index = i;
