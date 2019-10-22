@@ -39,14 +39,6 @@
                 img: 'images/paris.jpeg',
                 id: 3,
                 checked: false
-            },
-            {
-                abbreviation: 'TMP',
-                title: 'Tampa',
-                subtitle: 'paradise',
-                img: 'images/paris.jpeg',
-                id: 4,
-                checked: false
             }
         ];
 

@@ -39,26 +39,12 @@
                 img: 'images/paris.jpeg',
                 id: 3,
                 checked: false
-            },
-            {
-                abbreviation: 'TMP',
-                title: 'Tampa',
-                subtitle: 'paradise',
-                img: 'images/paris.jpeg',
-                id: 4,
-                checked: false
             }
         ];
 
         // modify dt.destination
         dt.Modify = (place) => {
             let index = -1;
-
-            $timeout(() => {
-                $scope.$apply(() => {
-                    dt.filter = '';
-                });
-            }, 0);
 
             dt.destination.find((item, i) => {
                 if (place.id === item.id) {
@@ -93,14 +79,6 @@
 
                     // adding chips to dt.destination
                     dt.destination.push({abbreviation: chipTag, id: id});
-
-                    // /cleaning filter
-                    $timeout(() => {
-                        $scope.$apply(() => {
-                            dt.filter = '';
-                        });
-                    }, 0);
-
                 }
             });
 
@@ -108,13 +86,6 @@
             $('#chips-destination').chips({
                 onChipDelete: (res) => {
                     OnDeleteChip(res, 'o')
-                },
-                onChipAdd: () => {
-                    $timeout(() => {
-                        $scope.$apply(() => {
-                            dt.filter = '';
-                        });
-                    }, 0);
                 }
             });
 
@@ -172,7 +143,6 @@
                 //pushing false checked option
                 $timeout(() => {
                     $scope.$apply(() => {
-                        dt.filter = '';
                         dt.destination_search[index_OS].checked = false;
                     });
                 }, 0);
